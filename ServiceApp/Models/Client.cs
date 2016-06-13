@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 
 namespace ServiceApp.Models
 {
@@ -8,8 +9,14 @@ namespace ServiceApp.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:###-###-####}")]
         public long HomePhone { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:###-###-####}")]
         public long CellPhone { get; set; }
+
+        [DisplayFormat(DataFormatString = "{0:###-###-####}")]
         public long AlternatePhone { get; set; }
     }
 
